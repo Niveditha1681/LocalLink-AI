@@ -1,3 +1,469 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #05050c;
+  color: white;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+}
+
+
+/* =========================================================
+   PHONE FLOAT / DANCE
+========================================================= */
+
+/*
+   The phone gently moves up/down and slightly rotates.
+*/
+
+@keyframes phoneDance {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(7deg);
+  }
+
+  20% {
+    transform: translate3d(-4px, -7px, 0) rotate(6.5deg);
+  }
+
+  40% {
+    transform: translate3d(5px, -12px, 0) rotate(7.5deg);
+  }
+
+  60% {
+    transform: translate3d(7px, -5px, 0) rotate(8deg);
+  }
+
+  80% {
+    transform: translate3d(-3px, 4px, 0) rotate(6.5deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(7deg);
+  }
+}
+
+.animate-phone-dance {
+  animation: phoneDance 5s ease-in-out infinite;
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   SIMPLE PHONE FLOAT
+========================================================= */
+
+@keyframes phoneFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(7deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(7deg);
+  }
+}
+
+.animate-phone-float {
+  animation: phoneFloat 6s ease-in-out infinite;
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   SOFT PULSE
+========================================================= */
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.soft-pulse {
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   NEARBY STORES BUBBLE
+========================================================= */
+
+@keyframes nearbyBubble {
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-2deg);
+  }
+
+  50% {
+    transform:
+      translate3d(0, -10px, 0)
+      rotate(1deg);
+  }
+}
+
+.animate-nearby-bubble {
+  animation: nearbyBubble 4s ease-in-out infinite;
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   SECOND BUBBLE FLOAT
+========================================================= */
+
+@keyframes bubbleFloat {
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-3deg);
+  }
+
+  50% {
+    transform:
+      translate3d(0, -12px, 0)
+      rotate(-1deg);
+  }
+}
+
+.animate-bubble-float {
+  animation: bubbleFloat 4s ease-in-out infinite;
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   LIVE LOCATION PIN
+========================================================= */
+
+.location-pin {
+  position: relative;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50% 50% 50% 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #ddd6fe 30%,
+      #a78bfa 60%,
+      #7c3aed 100%
+    );
+
+  transform: rotate(-45deg);
+
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, 0.95),
+    0 0 18px rgba(192, 132, 252, 0.95),
+    0 0 35px rgba(168, 85, 247, 0.9),
+    0 0 65px rgba(124, 58, 237, 0.7);
+
+  z-index: 30;
+
+  animation: locationPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOCATION PIN CENTER
+========================================================= */
+
+.pin-hole {
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  left: 14px;
+  top: 14px;
+
+  border-radius: 50%;
+
+  background: #111a42;
+
+  border: 3px solid white;
+
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9);
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   LOCATION PIN PULSE
+========================================================= */
+
+@keyframes locationPulse {
+  0%,
+  100% {
+    filter: brightness(1);
+
+    box-shadow:
+      0 0 8px rgba(255, 255, 255, 0.9),
+      0 0 18px rgba(192, 132, 252, 0.8),
+      0 0 35px rgba(168, 85, 247, 0.8),
+      0 0 60px rgba(124, 58, 237, 0.6);
+  }
+
+  50% {
+    filter: brightness(1.35);
+
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 1),
+      0 0 25px rgba(216, 180, 254, 1),
+      0 0 50px rgba(168, 85, 247, 1),
+      0 0 90px rgba(124, 58, 237, 0.85);
+  }
+}
+
+/* =========================================================
+   LOCATION RADAR WAVES
+========================================================= */
+
+.location-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(168, 85, 247, 0.9);
+
+  background: transparent;
+
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.2);
+
+  opacity: 0;
+
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.5),
+    inset 0 0 12px rgba(168, 85, 247, 0.15);
+
+  animation:
+    locationWave
+    3s
+    ease-out
+    infinite;
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   FIRST WAVE
+========================================================= */
+
+.ring-one {
+  width: 65px;
+  height: 65px;
+
+  animation-delay: 0s;
+}
+
+
+/* =========================================================
+   SECOND WAVE
+========================================================= */
+
+.ring-two {
+  width: 90px;
+  height: 90px;
+
+  animation-delay: 1s;
+}
+
+
+/* =========================================================
+   THIRD WAVE
+========================================================= */
+
+.ring-three {
+  width: 115px;
+  height: 115px;
+
+  animation-delay: 2s;
+}
+
+
+/* =========================================================
+   RADAR WAVE ANIMATION
+========================================================= */
+
+@keyframes locationWave {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.2);
+
+    opacity: 0;
+
+    border-color: rgba(168, 85, 247, 0.9);
+
+    box-shadow:
+      0 0 8px rgba(168, 85, 247, 0.7),
+      inset 0 0 10px rgba(168, 85, 247, 0.25);
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.65;
+  }
+
+  70% {
+    opacity: 0.25;
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(1.45);
+
+    opacity: 0;
+
+    border-color: rgba(168, 85, 247, 0);
+
+    box-shadow:
+      0 0 35px rgba(168, 85, 247, 0),
+      inset 0 0 20px rgba(168, 85, 247, 0);
+  }
+}
+
+/* =========================================================
+   OPTIONAL LOCATION GLOW
+========================================================= */
+
+.location-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 120px;
+  height: 120px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.35) 0%,
+      rgba(139, 92, 246, 0.18) 35%,
+      rgba(124, 58, 237, 0.08) 55%,
+      transparent 75%
+    );
+
+  filter: blur(8px);
+
+  pointer-events: none;
+
+  animation: glowPulse 2.5s ease-in-out infinite;
+
+  z-index: 5;
+}
+
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform:
+      translate(-50%, -50%)
+      scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform:
+      translate(-50%, -50%)
+      scale(1.15);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-phone-dance,
+  .animate-phone-float,
+  .animate-nearby-bubble,
+  .animate-bubble-float,
+  .soft-pulse,
+  .location-pin,
+  .location-ring,
+  .location-glow {
+    animation: none;
+  }
+}
