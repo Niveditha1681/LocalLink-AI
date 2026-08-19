@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
   const location = useLocation();
@@ -28,11 +28,14 @@ function Header() {
             LOGO
         ================================================== */}
 
-        <div className="flex items-center gap-3">
+        <Link
+          to="/"
+          className="flex items-center gap-3"
+        >
 
           <div className="relative">
 
-            {/* Glow */}
+            {/* Logo glow */}
 
             <div
               className="
@@ -44,7 +47,7 @@ function Header() {
               "
             />
 
-            {/* Location Logo */}
+            {/* Location logo */}
 
             <svg
               className="
@@ -72,7 +75,7 @@ function Header() {
           </div>
 
 
-          {/* Logo Text */}
+          {/* Logo text */}
 
           <span
             className="
@@ -88,7 +91,7 @@ function Header() {
             </span>
           </span>
 
-        </div>
+        </Link>
 
 
         {/* =================================================
@@ -104,10 +107,12 @@ function Header() {
           "
         >
 
-          {/* HOME */}
+          {/* =================================================
+              HOME
+          ================================================== */}
 
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`
               relative
               text-[16px]
@@ -139,13 +144,15 @@ function Header() {
               />
             )}
 
-          </a>
+          </Link>
 
 
-          {/* ABOUT */}
+          {/* =================================================
+              ABOUT
+          ================================================== */}
 
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className={`
               relative
               text-[16px]
@@ -177,13 +184,13 @@ function Header() {
               />
             )}
 
-          </a>
+          </Link>
 
         </nav>
 
 
         {/* =================================================
-            SIGN UP BUTTON
+            LOGIN BUTTON
         ================================================== */}
 
         <button
@@ -208,6 +215,8 @@ function Header() {
           "
         >
 
+          {/* User icon */}
+
           <svg
             className="h-5 w-5"
             viewBox="0 0 24 24"
@@ -226,7 +235,7 @@ function Header() {
             />
           </svg>
 
-          Sign Up
+          Login
 
         </button>
 
