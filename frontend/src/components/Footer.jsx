@@ -46,7 +46,7 @@ function Footer() {
           relative
           z-10
           mx-auto
-          max-w-[1250px]
+          max-w-[1450px]
           px-8
           py-16
           lg:px-10
