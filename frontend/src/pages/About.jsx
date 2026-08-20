@@ -8,11 +8,12 @@ function About() {
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
 
+        {/* Left glow */}
         <div
           className="
             absolute
-            left-[-100px]
-            top-[15%]
+            left-[-120px]
+            top-[18%]
             h-[450px]
             w-[450px]
             rounded-full
@@ -21,26 +22,28 @@ function About() {
           "
         />
 
+        {/* Right glow */}
         <div
           className="
             absolute
-            right-[-100px]
-            top-[10%]
-            h-[550px]
-            w-[550px]
+            right-[-120px]
+            top-[28%]
+            h-[500px]
+            w-[500px]
             rounded-full
             bg-fuchsia-600/10
             blur-[160px]
           "
         />
 
+        {/* Bottom glow */}
         <div
           className="
             absolute
             bottom-[-180px]
             left-1/2
-            h-[500px]
-            w-[750px]
+            h-[450px]
+            w-[700px]
             -translate-x-1/2
             rounded-full
             bg-purple-600/10
@@ -52,7 +55,133 @@ function About() {
 
 
       {/* =====================================================
-          MAIN CONTENT
+          ABOUT INTRODUCTION
+      ====================================================== */}
+
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-[1450px]
+          px-8
+          pb-10
+          pt-[150px]
+          lg:px-10
+        "
+      >
+
+        <div className="max-w-[900px]">
+
+          {/* ABOUT LABEL */}
+
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-3
+              rounded-full
+              border
+              border-violet-500/30
+              bg-violet-950/20
+              px-5
+              py-2.5
+              text-sm
+              font-semibold
+              tracking-wide
+              text-violet-200
+              backdrop-blur-md
+            "
+          >
+
+            <span
+              className="
+                h-2
+                w-2
+                rounded-full
+                bg-violet-400
+                shadow-[0_0_14px_rgba(167,139,250,0.9)]
+              "
+            />
+
+            ABOUT LOCALLINK AI
+
+          </div>
+
+
+          {/* MAIN HEADING */}
+
+          <h1
+            className="
+              mt-7
+              text-[52px]
+              font-extrabold
+              leading-[1]
+              tracking-[-2px]
+              text-white
+              sm:text-[64px]
+            "
+          >
+
+            Connecting You
+
+            <span
+              className="
+                block
+                bg-gradient-to-r
+                from-violet-400
+                via-purple-400
+                to-fuchsia-400
+                bg-clip-text
+                text-transparent
+              "
+            >
+              With Local Resources.
+            </span>
+
+          </h1>
+
+
+          {/* UNDERLINE */}
+
+          <div
+            className="
+              mt-7
+              h-[3px]
+              w-14
+              rounded-full
+              bg-gradient-to-r
+              from-violet-500
+              to-fuchsia-500
+              shadow-[0_0_15px_rgba(139,92,246,0.8)]
+            "
+          />
+
+
+          {/* PROJECT DESCRIPTION */}
+
+          <p
+            className="
+              mt-7
+              max-w-[720px]
+              text-lg
+              leading-8
+              text-white/55
+              sm:text-xl
+            "
+          >
+            LocalLink AI connects students and prototype builders
+            with nearby tools, materials, and components, making it
+            easier to find the right resources when you need them.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
+          CONTACT SECTION
       ====================================================== */}
 
       <div
@@ -63,21 +192,94 @@ function About() {
           mx-auto
           max-w-[1450px]
           px-8
-          pb-32
-          pt-[150px]
+          pb-24
+          pt-[70px]
           lg:px-10
         "
       >
 
         {/* =================================================
-            TWO COLUMN CONTACT LAYOUT
+            CONTACT HEADER
+        ================================================== */}
+
+        <div className="mb-16 max-w-[700px]">
+
+          <h2
+            className="
+              text-[52px]
+              font-extrabold
+              leading-[1]
+              tracking-[-2px]
+              text-white
+              sm:text-[64px]
+            "
+          >
+
+            Get in{" "}
+
+            <span
+              className="
+                bg-gradient-to-r
+                from-violet-400
+                via-purple-400
+                to-fuchsia-400
+                bg-clip-text
+                text-transparent
+              "
+            >
+              touch
+            </span>
+
+          </h2>
+
+
+          {/* PURPLE UNDERLINE */}
+
+          <div
+            className="
+              mt-7
+              h-[3px]
+              w-14
+              rounded-full
+              bg-gradient-to-r
+              from-violet-500
+              to-fuchsia-500
+              shadow-[0_0_15px_rgba(139,92,246,0.8)]
+            "
+          />
+
+
+          {/* CONTACT DESCRIPTION */}
+
+          <p
+            className="
+              mt-8
+              max-w-[700px]
+              text-lg
+              leading-8
+              text-white/55
+            "
+          >
+            Ready to connect with LocalLink AI? Have a question,
+            suggestion, or want to know more about our platform?
+            Reach out to us.
+          </p>
+
+        </div>
+
+
+        {/* =================================================
+            CONTACT CONTENT
+            z-20 keeps this ABOVE the city background
         ================================================== */}
 
         <div
           className="
+            relative
+            z-20
             grid
-            gap-14
-            lg:grid-cols-[0.85fr_1.15fr]
+            gap-12
+            lg:grid-cols-[0.75fr_1.25fr]
             lg:items-start
           "
         >
@@ -86,112 +288,41 @@ function About() {
               LEFT SIDE
           ================================================== */}
 
-          <div className="relative z-20">
+          <div className="relative z-20 space-y-10">
 
-            {/* TITLE */}
+            {/* EMAIL */}
 
-            <h1
-              className="
-                text-[52px]
-                font-extrabold
-                leading-[1]
-                tracking-[-2px]
-                text-white
-                sm:text-[64px]
-                lg:text-[68px]
-              "
-            >
-              Get in{" "}
-
-              <span
-                className="
-                  bg-gradient-to-r
-                  from-violet-400
-                  via-purple-400
-                  to-fuchsia-400
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                touch
-              </span>
-            </h1>
-
-
-            {/* UNDERLINE */}
-
-            <div
-              className="
-                mt-7
-                h-[3px]
-                w-14
-                rounded-full
-                bg-gradient-to-r
-                from-violet-500
-                to-fuchsia-500
-                shadow-[0_0_15px_rgba(139,92,246,0.8)]
-              "
+            <ContactInfo
+              type="email"
+              title="Email us"
+              value="hello@locallinkai.com"
             />
 
 
-            {/* DESCRIPTION */}
+            {/* PHONE */}
 
-            <p
-              className="
-                mt-8
-                max-w-[600px]
-                text-lg
-                leading-8
-                text-white/55
-              "
-            >
-              Ready to connect with LocalLink AI? Have a question,
-              suggestion, or want to know more about our platform?
-              Reach out to us.
-            </p>
+            <ContactInfo
+              type="phone"
+              title="Call us"
+              value="+91 98765 43210"
+            />
 
 
-            {/* =================================================
-                CONTACT INFORMATION
-            ================================================== */}
+            {/* LOCATION */}
 
-            <div className="mt-14 space-y-9">
-
-              {/* EMAIL */}
-
-              <ContactInfo
-                type="email"
-                title="Email us"
-                value="hello@locallinkai.com"
-              />
-
-
-              {/* PHONE */}
-
-              <ContactInfo
-                type="phone"
-                title="Call us"
-                value="+91 98765 43210"
-              />
-
-
-              {/* LOCATION */}
-
-              <ContactInfo
-                type="location"
-                title="Visit us"
-                value={
-                  <>
-                    Innovation Hub,
-                    <br />
-                    Coimbatore, Tamil Nadu
-                    <br />
-                    India
-                  </>
-                }
-              />
-
-            </div>
+            <ContactInfo
+              type="location"
+              title="Visit us"
+              value={
+                <>
+                  Innovation Hub,
+                  <br />
+                  Coimbatore, Tamil Nadu
+                  <br />
+                  India
+                </>
+              }
+            />
 
           </div>
 
@@ -203,160 +334,129 @@ function About() {
           <div
             className="
               relative
-              z-30
-              lg:mt-0
+              z-20
+              rounded-[28px]
+              border
+              border-violet-500/40
+              bg-[#080719]
+              p-7
+              shadow-[0_0_70px_rgba(124,58,237,0.14)]
+              backdrop-blur-xl
+              sm:p-10
             "
           >
 
-            <div
-              className="
-                rounded-[28px]
-                border
-                border-violet-500/50
-                bg-[#080719]/95
-                p-7
-                shadow-[0_0_70px_rgba(124,58,237,0.16)]
-                backdrop-blur-xl
-                sm:p-10
-              "
-            >
+            <form>
 
-              <form>
+              {/* NAME + COLLEGE */}
 
-                {/* =================================================
-                    NAME + COLLEGE
-                ================================================== */}
+              <div
+                className="
+                  grid
+                  gap-6
+                  md:grid-cols-2
+                "
+              >
 
-                <div
+                <InputField
+                  label="Your Name"
+                  placeholder="Enter your name"
+                  type="text"
+                />
+
+                <InputField
+                  label="College / Organization"
+                  placeholder="Enter your college"
+                  type="text"
+                />
+
+              </div>
+
+
+              {/* EMAIL */}
+
+              <div className="mt-7">
+
+                <InputField
+                  label="Email Address"
+                  placeholder="your@email.com"
+                  type="email"
+                />
+
+              </div>
+
+
+              {/* MESSAGE */}
+
+              <div className="mt-7">
+
+                <label
                   className="
-                    grid
-                    gap-6
-                    md:grid-cols-2
-                  "
-                >
-
-                  <InputField
-                    label="Your Name"
-                    placeholder="Enter your name"
-                    type="text"
-                  />
-
-                  <InputField
-                    label="College / Organization"
-                    placeholder="Enter your college"
-                    type="text"
-                  />
-
-                </div>
-
-
-                {/* =================================================
-                    EMAIL
-                ================================================== */}
-
-                <div className="mt-7">
-
-                  <InputField
-                    label="Email Address"
-                    placeholder="your@email.com"
-                    type="email"
-                  />
-
-                </div>
-
-
-                {/* =================================================
-                    MESSAGE
-                ================================================== */}
-
-                <div className="mt-7">
-
-                  <label
-                    className="
-                      mb-3
-                      block
-                      text-[16px]
-                      font-semibold
-                      text-white
-                    "
-                  >
-                    Message
-                  </label>
-
-                  <textarea
-                    rows="6"
-                    placeholder="Tell us how we can help..."
-                    className="
-                      w-full
-                      resize-none
-                      rounded-xl
-                      border
-                      border-violet-500/40
-                      bg-[#09091b]
-                      px-5
-                      py-4
-                      text-white
-                      outline-none
-                      placeholder:text-white/30
-                      transition
-                      focus:border-violet-400
-                      focus:shadow-[0_0_25px_rgba(139,92,246,0.15)]
-                    "
-                  />
-
-                </div>
-
-
-                {/* =================================================
-                    SEND BUTTON
-                ================================================== */}
-
-                <button
-                  type="submit"
-                  className="
-                    mt-7
-                    flex
-                    h-[62px]
-                    w-full
-                    items-center
-                    justify-center
-                    gap-3
-                    rounded-xl
-                    bg-gradient-to-r
-                    from-violet-600
-                    via-purple-500
-                    to-fuchsia-500
-                    px-6
+                    mb-3
+                    block
+                    text-[16px]
                     font-semibold
                     text-white
-                    shadow-[0_15px_45px_rgba(124,58,237,0.3)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-[0_20px_60px_rgba(168,85,247,0.45)]
                   "
                 >
+                  Message
+                </label>
 
-                  <SendIcon />
+                <textarea
+                  rows="6"
+                  placeholder="Tell us how we can help..."
+                  className="
+                    w-full
+                    resize-none
+                    rounded-xl
+                    border
+                    border-violet-500/40
+                    bg-[#09091b]
+                    px-5
+                    py-4
+                    text-white
+                    outline-none
+                    placeholder:text-white/30
+                    transition
+                    duration-300
+                    focus:border-violet-400
+                    focus:shadow-[0_0_25px_rgba(139,92,246,0.15)]
+                  "
+                />
 
-                  <span>
-                    Send Message
-                  </span>
+              </div>
 
-                </button>
 
-              </form>
+              {/* =================================================
+                  SEND MESSAGE BUTTON
+              ================================================== */}
 
-            </div>
+              <button
+                type="submit"
+                className="send-message-button"
+              >
+
+                <SendIcon />
+
+                <span>
+                  Send Message
+                </span>
+
+              </button>
+
+            </form>
 
           </div>
 
         </div>
 
 
-        {/* =====================================================
-            BOTTOM CITY EFFECT
-        ====================================================== */}
+        {/* =================================================
+            BOTTOM CITY / BUILDING EFFECT
+
+            IMPORTANT:
+            z-0 keeps buildings BEHIND the contact content.
+        ================================================== */}
 
         <div
           className="
@@ -366,35 +466,39 @@ function About() {
             left-0
             right-0
             z-0
-            h-[260px]
+            h-[240px]
             overflow-hidden
-            opacity-35
+            opacity-30
           "
         >
 
-          {/* BUILDINGS */}
+          {/* Building 1 */}
 
           <div
             className="
               absolute
               bottom-0
-              left-[4%]
+              left-[5%]
               h-[150px]
               w-[70px]
               bg-[#0d0920]
             "
           />
 
+          {/* Building 2 */}
+
           <div
             className="
               absolute
               bottom-0
-              left-[13%]
+              left-[14%]
               h-[210px]
               w-[90px]
               bg-[#100b25]
             "
           />
+
+          {/* Building 3 */}
 
           <div
             className="
@@ -407,44 +511,39 @@ function About() {
             "
           />
 
-          <div
-            className="
-              absolute
-              bottom-0
-              left-[38%]
-              h-[180px]
-              w-[75px]
-              bg-[#100b25]
-            "
-          />
+          {/* Building 4 */}
 
           <div
             className="
               absolute
               bottom-0
-              right-[25%]
+              right-[20%]
               h-[190px]
               w-[80px]
               bg-[#100b25]
             "
           />
 
+          {/* Building 5 */}
+
           <div
             className="
               absolute
               bottom-0
-              right-[13%]
+              right-[9%]
               h-[220px]
               w-[90px]
               bg-[#0d0920]
             "
           />
 
+          {/* Building 6 */}
+
           <div
             className="
               absolute
               bottom-0
-              right-[3%]
+              right-[2%]
               h-[150px]
               w-[70px]
               bg-[#100b25]
@@ -452,7 +551,7 @@ function About() {
           />
 
 
-          {/* HORIZON */}
+          {/* Horizon */}
 
           <div
             className="
@@ -488,7 +587,7 @@ function ContactInfo({
   value,
 }) {
   return (
-    <div className="flex items-start gap-6">
+    <div className="relative z-20 flex items-start gap-6">
 
       {/* ICON */}
 
@@ -589,6 +688,7 @@ function InputField({
           outline-none
           placeholder:text-white/30
           transition
+          duration-300
           focus:border-violet-400
           focus:shadow-[0_0_25px_rgba(139,92,246,0.15)]
         "
@@ -612,17 +712,13 @@ function LocationIcon() {
       stroke="currentColor"
       strokeWidth="1.8"
     >
-
-      <path
-        d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
-      />
+      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
 
       <circle
         cx="12"
         cy="10"
         r="2.5"
       />
-
     </svg>
   );
 }
@@ -641,7 +737,6 @@ function EmailIcon() {
       stroke="currentColor"
       strokeWidth="1.8"
     >
-
       <rect
         x="3"
         y="5"
@@ -651,7 +746,6 @@ function EmailIcon() {
       />
 
       <path d="m3 7 9 6 9-6" />
-
     </svg>
   );
 }
@@ -670,7 +764,6 @@ function PhoneIcon() {
       stroke="currentColor"
       strokeWidth="1.8"
     >
-
       <path
         d="
           M22 16.92v3a2 2 0 0 1-2.18 2
@@ -685,7 +778,6 @@ function PhoneIcon() {
           A2 2 0 0 1 22 16.92Z
         "
       />
-
     </svg>
   );
 }
@@ -704,11 +796,8 @@ function SendIcon() {
       stroke="currentColor"
       strokeWidth="1.8"
     >
-
       <path d="m22 2-7 20-4-9-9-4Z" />
-
       <path d="M22 2 11 13" />
-
     </svg>
   );
 }

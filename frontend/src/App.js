@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -64,12 +65,16 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* GLOBAL HEADER */}
+      {/* =====================================================
+          GLOBAL HEADER
+      ====================================================== */}
 
       <Header />
 
 
-      {/* ROUTES */}
+      {/* =====================================================
+          ROUTES
+      ====================================================== */}
 
       <Routes>
 
@@ -105,6 +110,13 @@ function App() {
         />
 
       </Routes>
+
+
+      {/* =====================================================
+          GLOBAL FOOTER
+      ====================================================== */}
+
+      <Footer />
 
     </BrowserRouter>
   );
