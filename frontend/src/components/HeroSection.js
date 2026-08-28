@@ -1,5 +1,7 @@
 import NeonCity from "./NeonCity";
 import PhoneVisual from "./PhoneVisual";
+import { Link } from "react-router-dom";
+
 
 function HeroSection() {
   return (
@@ -163,6 +165,7 @@ function HeroSection() {
               sm:text-xl
             "
           >
+
             Your smart local search assistant.
 
             <br />
@@ -172,6 +175,7 @@ function HeroSection() {
             <br />
 
             for your next prototype in real-time.
+
           </p>
 
 
@@ -190,10 +194,10 @@ function HeroSection() {
 
             {/* =================================================
                 SIGN UP BUTTON
-                SEARCH ICON REMOVED
             ================================================== */}
 
-            <button
+            <Link
+              to="/signup"
               className="
                 group
                 flex
@@ -214,17 +218,20 @@ function HeroSection() {
                 hover:shadow-[0_20px_60px_rgba(168,85,247,0.5)]
               "
             >
+
               <span>
                 Sign Up
               </span>
-            </button>
+
+            </Link>
 
 
             {/* =================================================
-                EXPLORE MAP
+                EXPLORE MAP BUTTON
             ================================================== */}
 
-            <button
+            <Link
+              to="/search"
               className="
                 flex
                 h-[58px]
@@ -245,6 +252,8 @@ function HeroSection() {
                 hover:bg-violet-500/10
               "
             >
+
+              {/* Map Icon */}
 
               <svg
                 width="22"
@@ -279,11 +288,12 @@ function HeroSection() {
 
               </svg>
 
+
               <span>
                 Explore Map
               </span>
 
-            </button>
+            </Link>
 
           </div>
 
@@ -403,7 +413,9 @@ function FeatureCard({
           group-hover:scale-110
         "
       >
+
         {icon}
+
       </div>
 
 

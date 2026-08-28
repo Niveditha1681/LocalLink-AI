@@ -825,7 +825,7 @@ function SignUp() {
 
                     <button
                       type="button"
-                      onClick={() => navigate("/")}
+                      onClick={() => navigate("/login")}
                       className="
                         font-semibold
                         text-fuchsia-400

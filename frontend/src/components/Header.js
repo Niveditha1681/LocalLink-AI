@@ -35,8 +35,6 @@ function Header() {
 
           <div className="relative">
 
-            {/* Logo glow */}
-
             <div
               className="
                 absolute
@@ -46,8 +44,6 @@ function Header() {
                 blur-xl
               "
             />
-
-            {/* Location logo */}
 
             <svg
               className="
@@ -61,6 +57,7 @@ function Header() {
               stroke="currentColor"
               strokeWidth="1.8"
             >
+
               <path
                 d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
               />
@@ -70,12 +67,10 @@ function Header() {
                 cy="10"
                 r="2.5"
               />
+
             </svg>
 
           </div>
-
-
-          {/* Logo text */}
 
           <span
             className="
@@ -107,9 +102,7 @@ function Header() {
           "
         >
 
-          {/* =================================================
-              HOME
-          ================================================== */}
+          {/* HOME */}
 
           <Link
             to="/"
@@ -126,9 +119,8 @@ function Header() {
               }
             `}
           >
-            Home
 
-            {/* Active underline */}
+            Home
 
             {isHome && (
               <span
@@ -147,9 +139,7 @@ function Header() {
           </Link>
 
 
-          {/* =================================================
-              ABOUT
-          ================================================== */}
+          {/* ABOUT */}
 
           <Link
             to="/about"
@@ -166,9 +156,8 @@ function Header() {
               }
             `}
           >
-            About
 
-            {/* Active underline */}
+            About
 
             {isAbout && (
               <span
@@ -190,10 +179,11 @@ function Header() {
 
 
         {/* =================================================
-            LOGIN BUTTON
+            LOGIN
         ================================================== */}
 
-        <button
+        <Link
+          to="/login"
           className="
             flex
             items-center
@@ -215,8 +205,6 @@ function Header() {
           "
         >
 
-          {/* User icon */}
-
           <svg
             className="h-5 w-5"
             viewBox="0 0 24 24"
@@ -224,6 +212,7 @@ function Header() {
             stroke="currentColor"
             strokeWidth="1.8"
           >
+
             <circle
               cx="12"
               cy="8"
@@ -233,11 +222,12 @@ function Header() {
             <path
               d="M5 21c0-3.5 3-6 7-6s7 2.5 7 6"
             />
+
           </svg>
 
           Login
 
-        </button>
+        </Link>
 
       </div>
 
